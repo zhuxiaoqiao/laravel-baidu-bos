@@ -1,0 +1,28 @@
+{
+    "name": "zhuxiaoqiao/laravel-baidu-bos",
+    "description": "A Flysystem Baidu Bos Wrapper for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zhu Xiaoqiao",
+            "email": "zhffan@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "zhuxiaoqiao/flysystem-baidu-bos": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zhuxiaoqiao\\LaravelBaiduBos\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0"
+        }
+    }
+}
