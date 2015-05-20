@@ -10,7 +10,7 @@ A Flysystem Baidu Bos Wrapper for Laravel
 ## Installation
 
 ```bash
-composer require "laravel-baidu-bos": "~1.0"
+composer require "zhuxiaoqiao/laravel-baidu-bos": "~1.0"
 
 ```
 or add the following line to your project's `composer.json`:
@@ -63,16 +63,16 @@ Add bos disk
 		],
 
 		'bos' => [
-      'driver' => 'bos',
-      'bucket' => 'your-bucket-name',
-      'options' => [
-        'credentials' => [
-          'ak' => 'your-ak',
-          'sk' => 'your-sk',
-        ],
-        'endpoint' => 'http://bj.bcebos.com',
-      ]
-    ],
+			'driver' => 'bos',
+			'bucket' => 'your-bucket-name',
+			'options' => [
+				'credentials' => [
+					'ak' => 'your-ak',
+					'sk' => 'your-sk',
+				],
+				'endpoint' => 'http://bj.bcebos.com',
+			]
+		],
 	],
 ```
 
