@@ -14,7 +14,7 @@ class BaiduBosFilesystemServiceProvider extends ServiceProvider {
         {
             $client = new BosClient($config['options']);
 
-            return new Filesystem(new BaiduBosAdapter($client));
+            return new Filesystem(new BaiduBosAdapter($client, $config['bucket']));
         });
     }
 
