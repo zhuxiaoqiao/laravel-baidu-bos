@@ -3,6 +3,7 @@
 use Storage;
 use BaiduBce\Services\Bos\BosClient;
 use Zhuxiaoqiao\Flysystem\BaiduBos\BaiduBosAdapter;
+use Zhuxiaoqiao\Flysystem\BaiduBos\PutFilePlugin;
 use League\Flysystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,8 +14,10 @@ class BaiduBosFilesystemServiceProvider extends ServiceProvider {
         Storage::extend('bos', function($app, $config)
         {
             $client = new BosClient($config['options']);
-
-            return new Filesystem(new BaiduBosAdapter($client, $config['bucket']));
+            $filesystem = new Filesystem(new BaiduBosAdapter($client, $config['bucket']));
+            $filesystem->addPlugin(new PutFilePlugin);
+            
+            return $filesystem;
         });
     }
 
